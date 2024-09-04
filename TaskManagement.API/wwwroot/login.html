@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="/CSS/login.css">
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="check">
+
+        <!-- Login Form -->
+        <div class="login form">
+            <header>Login</header>
+            <form id="loginForm">
+                <input type="text" id="loginEmail" placeholder="Enter your email">
+                <input type="password" id="loginPassword" placeholder="Enter your password">
+                <div id="loginError" class="error" style="color:red;"></div>
+                <a href="#">Forgot password?</a>
+                <input type="button" class="button" value="Login" onclick="loginUser()">
+            </form>
+            <div class="signup">
+                <span class="signup">
+                    Don't have an account?
+                    <label for="check">Signup</label>
+                </span>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="registration form">
+            <header>Signup</header>
+            <form id="registerForm">
+                <input type="text" id="registerUsername" placeholder="Enter your username">
+                <input type="email" id="registerEmail" placeholder="Enter your email">
+                <input type="password" id="registerPassword" placeholder="Create a password">
+                <input type="password" id="confirmPassword" placeholder="Confirm your password">
+
+                <!-- Role Dropdown -->
+                <select id="registerRole">
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="0">Regular User</option>
+                    <option value="1">Team Lead</option>
+                    <option value="2">Administrator</option>
+                </select>
+
+                <div id="registerError" class="error"></div>
+                <input type="button" class="button" value="Signup" onclick="registerUser()">
+            </form>
+            <div class="signup">
+                <span class="signup">
+                    Already have an account?
+                    <label for="check">Login</label>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="/JS/login.js"></script>
+</body>
+</html>
